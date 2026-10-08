@@ -1,4 +1,4 @@
-from parse.log_parser import parse_log
+from parser.log_parser import parse_log
 LOG_FILE = "/var/log/auth.log"
 
 def read_logs():
