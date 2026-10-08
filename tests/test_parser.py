@@ -1,0 +1,9 @@
+from parser.log_parser import parse_log
+def test_failed_login():
+    log = "2026-10-08T12:00:00+00:00 mint sshd: Failed password for admin from 10.0.2.20"
+
+    event = parse_log(log)
+
+    assert event["event_type"] == "failed_login"
+    assert event["username"] == "admin"
+    assert event["source_ip"] == "10.0.2.20"
