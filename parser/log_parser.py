@@ -1,6 +1,5 @@
 import re
 
-
 def parse_log(log):
     parts = log.split()
 
@@ -32,8 +31,7 @@ def parse_log(log):
         event_type = "successful_login"
 
     else:
-        username = None
-        event_type = "unknown"
+        return None
 
     ip_match = re.search(r"from (\d+\.\d+\.\d+\.\d+)", log)
 
