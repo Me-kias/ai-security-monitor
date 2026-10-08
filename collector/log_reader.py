@@ -1,3 +1,4 @@
+from parse.log_parser import parse_log
 LOG_FILE = "/var/log/auth.log"
 
 def read_logs():
@@ -6,4 +7,5 @@ def read_logs():
             yield line.strip()
         
 for log in read_logs():
-    print(log)
+    event = parse_log(log)
+    print(event)
