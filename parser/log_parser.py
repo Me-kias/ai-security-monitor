@@ -5,7 +5,7 @@ def parse_log(log):
     parts = log.split()
 
     timestamp = parts[0]
-    service = parts[2].strip(":")
+    service = parts[2].split("[")[0].strip(":")
     username = None
 
     if "sudo" in log:
