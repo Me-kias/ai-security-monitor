@@ -5,5 +5,5 @@ def read_logs():
         for line in file:
             yield line.strip()
         
-        for log in read_logs():
-            print(log)
+for log in read_logs():
+    print(log)
