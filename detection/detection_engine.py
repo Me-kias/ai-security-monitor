@@ -3,6 +3,6 @@ def detect_suspicious_activity(events):
 
     for event in events:
         if event["event_type"] == "failed_login":
-        failed_logins.append(event)
+            failed_logins.append(event)
     
 return failed_logins
