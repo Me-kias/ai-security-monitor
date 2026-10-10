@@ -7,3 +7,8 @@ def test_failed_login():
     assert event["event_type"] == "failed_login"
     assert event["username"] == "admin"
     assert event["source_ip"] == "10.0.2.20"
+def test_invalid_log():
+    log = "this is not a valid log"
+
+    event = parse_log(log)
+    assert event is None
